@@ -14,7 +14,7 @@ public class PostController {
     private PostService postService;
 
     @RequestMapping("/post/view/{id}")
-    public String view(@PathVariable("id")int id, Model model){
+    public String view(@PathVariable("id")long id, Model model){
         Post post = postService.findId(id);
         model.addAttribute("post", post);
         return "post/view";

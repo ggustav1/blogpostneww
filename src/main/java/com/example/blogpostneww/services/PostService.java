@@ -7,9 +7,10 @@ import java.util.List;
 public interface PostService {
 
     List<Post> findAlle();
-    Post findId(int id);
+    Post findId(long id);
     Post opret(Post post);
-    Post rediger(Post post);
-    void sletId(int id);
+    void sletId(long id);
+
+
 }
 //Dette interface indeholder alle de funktionaliteter som vores blog har.

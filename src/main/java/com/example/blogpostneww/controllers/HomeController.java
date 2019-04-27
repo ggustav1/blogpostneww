@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
-    @Autowired //
+    @Autowired
     private PostService postService;
 
     @RequestMapping("/")

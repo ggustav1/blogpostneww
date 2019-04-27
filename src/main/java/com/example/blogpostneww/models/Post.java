@@ -1,20 +1,33 @@
 package com.example.blogpostneww.models;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "posts")
 public class Post {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(nullable = false)
     private String titel;
+
+    @Lob @Column
     private String tekst;
+
+    @Column
     private Bruger forfatter;
+
+    @Column(nullable = false)
     private Date dato = new Date();
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -53,7 +66,7 @@ public class Post {
     public Post() {
     }
 
-    public Post(int id, String titel, String tekst, Bruger forfatter, Date dato) {
+    public Post(long id, String titel, String tekst, Bruger forfatter, Date dato) {
         this.id = id;
         this.titel = titel;
         this.tekst = tekst;

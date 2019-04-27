@@ -1,8 +1,20 @@
 package com.example.blogpostneww.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Brugere")
 public class Bruger {
+
+    @Column(nullable = false)
     private String brugernavn;
-    private String passwordHash;
+
+    @Column
+    private String kodeordHash;
+
+    @Column
     private String fuldNavn;
 
     public String getBrugernavn() {
@@ -13,12 +25,12 @@ public class Bruger {
         this.brugernavn = brugernavn;
     }
 
-    public String getPasswordHash() {
-        return passwordHash;
+    public String getKodeordHash() {
+        return kodeordHash;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setKodeordHash(String kodeordHash) {
+        this.kodeordHash = kodeordHash;
     }
 
     public String getFuldNavn() {
@@ -33,9 +45,9 @@ public class Bruger {
 
     }
 
-    public Bruger(String brugernavn, String passwordHash, String fuldNavn) {
+    public Bruger(String brugernavn, String kodeordHash, String fuldNavn) {
         this.brugernavn = brugernavn;
-        this.passwordHash = passwordHash;
+        this.kodeordHash = kodeordHash;
         this.fuldNavn = fuldNavn;
     }
 
@@ -43,7 +55,7 @@ public class Bruger {
     public String toString() {
         return "Bruger{" +
                 "brugernavn='" + brugernavn + '\'' +
-                ", passwordHash='" + passwordHash + '\'' +
+                ", kodeordHash='" + kodeordHash + '\'' +
                 ", fuldNavn='" + fuldNavn + '\'' +
                 '}';
     }
