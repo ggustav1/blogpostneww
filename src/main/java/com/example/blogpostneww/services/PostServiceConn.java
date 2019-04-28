@@ -1,7 +1,7 @@
 package com.example.blogpostneww.services;
 
 import com.example.blogpostneww.models.Post;
-import com.example.blogpostneww.repo.PostRepo;
+import com.example.blogpostneww.repo.PostRepoInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -10,11 +10,11 @@ import java.util.List;
 
 @Service
 @Primary
-public class PostServiceConn implements PostService {
+public class PostServiceConn implements PostServiceInterface {
 
 
     @Autowired
-    private PostRepo postRepo;
+    private PostRepoInterface postRepo;
 
 
     @Override

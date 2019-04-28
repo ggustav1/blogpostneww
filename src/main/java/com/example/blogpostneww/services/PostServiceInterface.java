@@ -4,7 +4,7 @@ import com.example.blogpostneww.models.Post;
 
 import java.util.List;
 
-public interface PostService {
+public interface PostServiceInterface {
 
     List<Post> findAlle();
     Post findId(long id);

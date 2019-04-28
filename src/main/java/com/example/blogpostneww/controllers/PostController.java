@@ -1,7 +1,7 @@
 package com.example.blogpostneww.controllers;
 
 import com.example.blogpostneww.models.Post;
-import com.example.blogpostneww.services.PostService;
+import com.example.blogpostneww.services.PostServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PostController {
     @Autowired
-    private PostService postService;
+    private PostServiceInterface postService;
 
     @RequestMapping("/post/view/{id}")
     public String view(@PathVariable("id")long id, Model model){

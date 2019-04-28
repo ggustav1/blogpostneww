@@ -25,28 +25,5 @@
     </tbody>
 </table>
 
-<table class="table table-striped table-bordered table-hover">
-    <thead>
-    <tr>
-
-        <th>Id</th>
-        <th>Titel</th>
-        <th>Tekst</th>
-        <th>Dato</th>
-
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="post: ${posts}">
-        <td th:text="${post.id}" />
-        <td th:text="${post.titel}" />
-        <td th:text="${post.tekst}" />
-        <td th:text="${post.dato}" />
-
-    </tr>
-
-    </tbody>
-</table>
-
 <div th:replace="fragments/footer"></div>
 

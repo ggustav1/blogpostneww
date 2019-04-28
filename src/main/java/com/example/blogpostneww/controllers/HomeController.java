@@ -1,7 +1,7 @@
 package com.example.blogpostneww.controllers;
 
 import com.example.blogpostneww.models.Post;
-import com.example.blogpostneww.services.PostService;
+import com.example.blogpostneww.services.PostServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    private PostService postService;
+    private PostServiceInterface postService;
 
     @RequestMapping("/")
     public String index(Model model){
