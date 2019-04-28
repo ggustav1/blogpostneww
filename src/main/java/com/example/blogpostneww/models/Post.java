@@ -18,7 +18,7 @@ public class Post {
     private String tekst;
 
     @Column
-    private Bruger forfatter;
+    private String forfatter;
 
     @Column(nullable = false)
     private Date dato = new Date();
@@ -47,11 +47,11 @@ public class Post {
         this.tekst = tekst;
     }
 
-    public Bruger getForfatter() {
+    public String getForfatter() {
         return forfatter;
     }
 
-    public void setForfatter(Bruger forfatter) {
+    public void setForfatter(String forfatter) {
         this.forfatter = forfatter;
     }
 
@@ -66,7 +66,7 @@ public class Post {
     public Post() {
     }
 
-    public Post(long id, String titel, String tekst, Bruger forfatter, Date dato) {
+    public Post(long id, String titel, String tekst, String forfatter, Date dato) {
         this.id = id;
         this.titel = titel;
         this.tekst = tekst;

@@ -1,12 +1,16 @@
 package com.example.blogpostneww.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Brugere")
 public class Bruger {
+
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false)
     private String brugernavn;
@@ -16,6 +20,14 @@ public class Bruger {
 
     @Column
     private String fuldNavn;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getBrugernavn() {
         return brugernavn;
@@ -45,7 +57,8 @@ public class Bruger {
 
     }
 
-    public Bruger(String brugernavn, String kodeordHash, String fuldNavn) {
+    public Bruger(Long id, String brugernavn, String kodeordHash, String fuldNavn) {
+        this.id = id;
         this.brugernavn = brugernavn;
         this.kodeordHash = kodeordHash;
         this.fuldNavn = fuldNavn;
@@ -54,7 +67,8 @@ public class Bruger {
     @Override
     public String toString() {
         return "Bruger{" +
-                "brugernavn='" + brugernavn + '\'' +
+                "id=" + id +
+                ", brugernavn='" + brugernavn + '\'' +
                 ", kodeordHash='" + kodeordHash + '\'' +
                 ", fuldNavn='" + fuldNavn + '\'' +
                 '}';
