@@ -17,9 +17,6 @@ public class PostServiceConn implements PostService {
     private PostRepo postRepo;
 
 
-
-
-
     @Override
         public List<Post> findAlle(){
         return this.postRepo.findAll();
