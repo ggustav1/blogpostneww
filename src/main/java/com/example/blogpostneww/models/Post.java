@@ -17,10 +17,7 @@ public class Post {
     @Lob @Column
     private String tekst;
 
-    @Column
-    private Bruger forfatter;
-
-    @Column(nullable = false)
+    @Column /*(nullable = false)*/
     private Date dato = new Date();
 
     public long getId() {
@@ -47,14 +44,6 @@ public class Post {
         this.tekst = tekst;
     }
 
-    public Bruger getForfatter() {
-        return forfatter;
-    }
-
-    public void setForfatter(Bruger forfatter) {
-        this.forfatter = forfatter;
-    }
-
     public Date getDato() {
         return dato;
     }
@@ -66,11 +55,10 @@ public class Post {
     public Post() {
     }
 
-    public Post(long id, String titel, String tekst, Bruger forfatter, Date dato) {
+    public Post(long id, String titel, String tekst, Date dato) {
         this.id = id;
         this.titel = titel;
         this.tekst = tekst;
-        this.forfatter = forfatter;
         this.dato = dato;
     }
 
@@ -80,7 +68,6 @@ public class Post {
                 "id=" + id +
                 ", titel='" + titel + '\'' +
                 ", tekst='" + tekst + '\'' +
-                ", forfatter=" + forfatter +
                 ", dato=" + dato +
                 '}';
     }

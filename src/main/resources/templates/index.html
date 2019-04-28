@@ -1,6 +1,10 @@
 <div th:replace="fragments/header"></div>
 
 <h1>Velkommen til vores nye blog</h1>
+<div class="contentContainer">
+    <p th:each="post: ${posts}" />
+
+</div>
 
 <div th:replace="fragments/footer"></div>
 
