@@ -1,0 +1,17 @@
+<div th:replace="fragments/header"></div>
+
+<h1>Opret Post</h1>
+<form method="post" th:object="${post}">
+    <div><label for="titel">Titel</label></div>
+    <input id="titel" type="text" name="Titel" th:value="*{titel}" />
+
+    <div><label for="tekst">Tekst</label></div>
+    <input id="tekst" type="text" name="Tekst" th:value="*{tekst}"/>
+
+    <div>
+        <input type="submit" value="Opret" />
+    </div>
+
+</form>
+
+<div th:replace="fragments/footer"></div>
