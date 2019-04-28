@@ -17,7 +17,7 @@ public class Post {
     @Lob @Column
     private String tekst;
 
-    @Column(nullable = false)
+    @Column /*(nullable = false)*/
     private Date dato = new Date();
 
     public long getId() {
