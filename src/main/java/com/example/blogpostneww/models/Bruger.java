@@ -10,22 +10,22 @@ public class Bruger {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    public String brugernavn = "Gus";
+    @Column()
+    public String brugernavn;
 
     @Column()
-    public String kodeordHash = "123";
+    public String kodeordHash;
 
     @Override
     public String toString() {
         return "Bruger{" +
                 "id=" + id +
-                ", brugernavn='" + brugernavn + '\'' +
-                ", kodeordHash='" + kodeordHash + '\'' +
+                ", brugernavn'" + brugernavn + '\'' +
+                ", kodeordHash'" + kodeordHash + '\'' +
                 '}';
     }
 
-    public Bruger(Long id, String brugernavn, String kodeordHash) {
+    public Bruger() {
         this.id = id;
         this.brugernavn = brugernavn;
         this.kodeordHash = kodeordHash;
