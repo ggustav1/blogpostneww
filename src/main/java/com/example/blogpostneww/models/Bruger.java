@@ -11,10 +11,10 @@ public class Bruger {
     private Long id;
 
     @Column(nullable = false)
-    public String brugernavn = "Gus";
+    public String brugernavn;
 
     @Column()
-    public String kodeordHash = "123";
+    public String kodeordHash;
 
     @Override
     public String toString() {

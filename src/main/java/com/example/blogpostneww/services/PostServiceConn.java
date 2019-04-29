@@ -12,10 +12,8 @@ import java.util.List;
 @Primary
 public class PostServiceConn implements PostServiceInterface {
 
-
     @Autowired
     private PostRepoInterface postRepo;
-
 
     @Override
         public List<Post> findAlle(){

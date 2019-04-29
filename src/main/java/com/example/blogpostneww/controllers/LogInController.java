@@ -16,8 +16,6 @@ public class LogInController {
 @Autowired
     private BrugerServiceStub brugerServiceStub;
 
-
-
 @RequestMapping("/users/login")
     public String login(LoginForm loginForm){
     return "users/login";
@@ -37,6 +35,5 @@ public class LogInController {
 
         return "redirect:/";
 }
-
 
 }
