@@ -2,18 +2,14 @@
 
 <h1>Login in the Blog</h1>
 
-<form method="post" th:object="${loginForm}">
-    <div><label for="username">Brugernavn:</label></div>
+<form method="post" th:object="${Login}">
+    <div><label for="brugernavn">Brugernavn:</label></div>
     <input id="brugernavn" type="text" name="brugernavn" th:value="*{brugernavn}" />
-    <span class="formError" th:if="${#fields.hasErrors('brugernavn')}"
-          th:errors="*{brugernavn}">Ugyldigt brugernavn</span>
 
-    <div><label for="kodeord" th:value="*{kodeord}">Password:</label></div>
+    <div><label for="kodeord" th:value="*{brugernavn}">Password:</label></div>
     <input id="kodeord" type="kodeord" name="kodeord" th:value="*{kodeord}" />
-    <span class="formError" th:if="${#fields.hasErrors('kodeord')}"
-          th:errors="*{kodeord}">Ugyldigt kodeord</span>
 
-    <div><input type="submit" value="Login"/>
+    <div><input type="submit" value="Login"/></div>
 </form>
 
 <div th:replace="fragments/footer"></div>
