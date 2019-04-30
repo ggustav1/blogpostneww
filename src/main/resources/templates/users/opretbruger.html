@@ -1,12 +1,12 @@
 <div th:replace="fragments/header"></div>
 
 <h1>Opret Bruger</h1>
-<form method="post" th:action="${post}">
-    <div><label for="titel">Brugernavn</label></div>
-    <input id="brugernavn" type="text" name="Titel" th:value="*{brugernavn}" />
+<form method="post" th:action="${bruger}">
+    <div><label for="brugernavn">Brugernavn</label></div>
+    <input id="brugernavn" type="text" name="brugernavn" th:value="*{brugernavn}" />
 
-    <div><label for="tekst">Kordeord</label></div>
-    <input id="kodeordHash" type="password" name="Tekst" th:value="*{kodeordHash}" />
+    <div><label for="kodeordHash">kodeordHash</label></div>
+    <input id="kodeordHash" type="password" name="kodeordHash" th:value="*{kodeordHash}" />
 
     <div>
         <input type="submit" value="Opret" />

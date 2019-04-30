@@ -26,13 +26,13 @@ public class LogInController {
     @RequestMapping(value = "/users/login", method = RequestMethod.POST)
     public String loginPage(@Valid LoginForm loginForm, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "users/login";
+            return "users/fejlsidelogin1";
         }
 
         if (!brugerServiceStub.godkend(
 
                 loginForm.getBrugernavn(), loginForm.getKodeord())){
-            return "users/login";
+            return "users/fejlsidelogin2";
         }
 
         return "redirect:/";
