@@ -6,6 +6,8 @@ public class LoginForm {
     @NotNull
     private String kodeord;
 
+    private String brugernavn;
+
     @Override
     public String toString() {
         return "LoginForm{" +
@@ -35,5 +37,4 @@ public class LoginForm {
         this.brugernavn = brugernavn;
     }
 
-    private String brugernavn;
 }

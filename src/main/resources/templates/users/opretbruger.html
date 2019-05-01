@@ -1,0 +1,17 @@
+<div th:replace="fragments/header"></div>
+
+<h1>Opret Bruger</h1>
+<form method="post" th:action="${bruger}">
+    <div><label for="brugernavn">Brugernavn</label></div>
+    <input id="brugernavn" type="text" name="brugernavn" th:value="*{brugernavn}" />
+
+    <div><label for="kodeordHash">kodeordHash</label></div>
+    <input id="kodeordHash" type="password" name="kodeordHash" th:value="*{kodeordHash}" />
+
+    <div>
+        <input type="submit" value="Opret" />
+    </div>
+
+</form>
+
+<div th:replace="fragments/footer"></div>
