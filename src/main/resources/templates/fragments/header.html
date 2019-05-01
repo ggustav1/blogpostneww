@@ -30,15 +30,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav ml-auto">
-            <li>
-                <a href="post/opret.html" th:href="@{/post/opret}" class="nav-link">Post</a>
+            <li th:if="${loggedIn} == true">
+                <a href="post/opret.html" th:href="@{/post/opret}" class="nav-link">Opret post</a>
             </li>
         </ul>
 
         <ul class="navbar-nav navbar-right ml-auto">
 
-            <li class="nav-item">
+            <div th:switch="${loggedIn}">
+            <li th:case="${null}" class="nav-item">
                 <a href="users/login.html" th:href="@{/users/login}" class="nav-link right"><i class="fa fa-user-plus" id="logged-in-info"></i> Admin Log ind</a>
+            </li>
+            <li th:case="${true}" class="nav-item">
+                <a th:href="@{/users/logout}" class="nav-link right">Log ud</a>
             </li>
             <li class="nav-item">
                 <a href="users/opretbruger.html" th:href="@{/users/opretbruger}" class="nav-link right "><i class="fas fa-user-plus"> Opret bruger</i></a>

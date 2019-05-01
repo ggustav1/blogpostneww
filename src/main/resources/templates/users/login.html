@@ -2,7 +2,7 @@
 
 <h1>Login in the Blog</h1>
 
-<form method="post" th:object="${loginForm}">
+<form method="post" th:object="${loginForm}" action="/users/login/valider">
     <div><label for="brugernavn">Brugernavn:</label></div>
     <input id="brugernavn" type="text" name="brugernavn" th:value="*{brugernavn}" />
     <span class="formError" th:if="${#fields.hasErrors('brugernavn')}"

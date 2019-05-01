@@ -5,7 +5,6 @@ import javax.validation.constraints.NotNull;
 public class LoginForm {
     @NotNull
     private String kodeord;
-
     private String brugernavn;
 
     @Override
