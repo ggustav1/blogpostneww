@@ -10,18 +10,22 @@ import java.util.Objects;
 
 @Service
 @Primary
-public class BrugerServiceStub implements BrugerInterface{
+public class BrugerServiceStub implements BrugerInterface {
 
     @Autowired
     private BrugerRepoInterface brugerRepoInterface;
 
     @Override
-    public boolean godkend(String brugernavn, String kodeord){
-        return Objects.equals(brugernavn, kodeord);
+    public boolean godkend(String brugernavn, String kodeordHash) {
+        return Objects.equals(brugernavn, kodeordHash);
     }
 
     @Override
-    public Bruger opret(Bruger bruger){
+    public Bruger opret(Bruger bruger) {
         return this.brugerRepoInterface.save(bruger);
     }
+
 }
+
+
+

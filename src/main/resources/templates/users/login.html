@@ -8,7 +8,7 @@
     <span class="formError" th:if="${#fields.hasErrors('brugernavn')}"
           th:errors="*{brugernavn}">Ugyldigt brugernavn</span>
 
-    <div><label for="kodeord" th:value="*{kodeord}">Password:</label></div>
+    <div><label for="kodeord" th:value="*{brugernavn}">Password:</label></div>
     <input id="kodeord" type="password" name="kodeord" th:value="*{kodeord}" />
     <span class="formError" th:if="${#fields.hasErrors('kodeord')}"
           th:errors="*{kodeord}">Ugyldigt kodeord</span>
