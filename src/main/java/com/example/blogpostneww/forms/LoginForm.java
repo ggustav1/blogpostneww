@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 public class LoginForm {
     @NotNull
     private String kodeord;
+    private String brugernavn;
 
     @Override
     public String toString() {
@@ -35,5 +36,4 @@ public class LoginForm {
         this.brugernavn = brugernavn;
     }
 
-    private String brugernavn;
 }

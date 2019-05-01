@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -24,9 +25,10 @@ public class HomeController {
     private BrugerInterface brugerInterface;
 
     @RequestMapping("/")
-    public String index(Model model) {
+    public String index(Model model, HttpSession session) {
         List<Post> posts = postService.findAlle();
         model.addAttribute("posts", posts);
+        model.addAttribute("loggedIn", session.getAttribute("loggedIn"));
 
         return "index";
     }
