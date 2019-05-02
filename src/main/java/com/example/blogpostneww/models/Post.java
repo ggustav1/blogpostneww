@@ -18,7 +18,7 @@ public class Post {
     @Lob @Column
     private String tekst;
 
-    @Column /*(nullable = false)*/
+    @Column
     private LocalDate dato = LocalDate.now().plusDays(1);
 
     public long getId() {

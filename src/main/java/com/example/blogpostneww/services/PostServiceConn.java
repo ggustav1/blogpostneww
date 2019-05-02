@@ -22,19 +22,8 @@ public class PostServiceConn implements PostServiceInterface {
     }
 
     @Override
-        public Post findId(long id){
-        //return this.postRepo.findOne(long id);
-        return this.postRepo.getOne(id);
-    }
-
-    @Override
         public Post opret(Post post){
         return this.postRepo.save(post);
     }
 
-    @Override
-        public void sletId(long id) {
-        // this.postRepo.delete(id);
-        
-    }
 }
