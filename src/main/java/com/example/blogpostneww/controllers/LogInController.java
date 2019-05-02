@@ -19,30 +19,6 @@ import javax.validation.Valid;
 
 
 
-/*
-@Autowired
-    private BrugerServiceStub brugerServiceStub;
-
-@RequestMapping("/users/login")
-    public String login(LoginForm loginForm){
-    return "users/login";
-}
-
-    @RequestMapping(value = "/users/login", method = RequestMethod.POST)
-    public String loginPage(@Valid LoginForm loginForm, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "users/fejlsidelogin1";
-        }
-
-        else if (!brugerServiceStub.godkend(
-
-                loginForm.getBrugernavn(), loginForm.getKodeord())){
-            return "users/fejlsidelogin2";
-        }
-        return "redirect:/";
-    }
-*/
-
     @Controller
     public class LogInController implements WebMvcConfigurer {
 

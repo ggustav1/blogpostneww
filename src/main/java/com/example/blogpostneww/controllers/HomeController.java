@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -29,6 +30,7 @@ public class HomeController {
         List<Post> posts = postService.findAlle();
         model.addAttribute("posts", posts);
         model.addAttribute("loggedIn", session.getAttribute("loggedIn"));
+        Collections.reverse(posts);
 
         return "index";
     }

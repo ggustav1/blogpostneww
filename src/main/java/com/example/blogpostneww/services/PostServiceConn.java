@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -21,19 +22,8 @@ public class PostServiceConn implements PostServiceInterface {
     }
 
     @Override
-        public Post findId(long id){
-        //return this.postRepo.findOne(long id);
-        return this.postRepo.getOne(id);
-    }
-
-    @Override
         public Post opret(Post post){
         return this.postRepo.save(post);
     }
 
-    @Override
-        public void sletId(long id) {
-        // this.postRepo.delete(id);
-        
-    }
 }
