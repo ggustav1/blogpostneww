@@ -7,9 +7,8 @@ import java.util.List;
 public interface PostServiceInterface {
 
     List<Post> findAlle();
-    Post findId(long id);
     Post opret(Post post);
-    void sletId(long id);
+
 
 
 }

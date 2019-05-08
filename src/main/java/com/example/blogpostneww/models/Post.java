@@ -1,7 +1,7 @@
 package com.example.blogpostneww.models;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "posts")
@@ -17,8 +17,8 @@ public class Post {
     @Lob @Column
     private String tekst;
 
-    @Column /*(nullable = false)*/
-    private Date dato = new Date();
+    @Column
+    private LocalDate dato = LocalDate.now().plusDays(1);
 
     public long getId() {
         return id;
@@ -44,23 +44,24 @@ public class Post {
         this.tekst = tekst;
     }
 
-    public Date getDato() {
+    public LocalDate getDato() {
         return dato;
     }
 
-    public void setDato(Date dato) {
+    public void setDato(LocalDate dato) {
         this.dato = dato;
     }
 
     public Post() {
     }
 
-    public Post(long id, String titel, String tekst, Date dato) {
+    public Post(long id, String titel, String tekst, LocalDate dato) {
         this.id = id;
         this.titel = titel;
         this.tekst = tekst;
         this.dato = dato;
     }
+
 
     @Override
     public String toString() {
