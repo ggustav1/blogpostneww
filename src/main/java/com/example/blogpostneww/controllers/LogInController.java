@@ -36,6 +36,7 @@ import javax.validation.Valid;
         public String checkPersonInfo(@Valid LoginForm loginForm, BindingResult bindingResult, HttpSession session) {
 
             if (bindingResult.hasErrors()) {
+                session.setAttribute("loggedIn", null);
                 return "users/login";
             }
 
