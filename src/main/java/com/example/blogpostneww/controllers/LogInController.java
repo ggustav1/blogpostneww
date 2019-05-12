@@ -29,7 +29,7 @@ import javax.validation.Valid;
 
         @GetMapping("/users/login")
         public String showForm(LoginForm loginForm) {
-            return "/users/login";
+            return "users/login";
         }
 
         @PostMapping("/users/login/valider")
